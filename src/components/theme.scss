@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// If need, change your variables before importing Bulma
+$theme-color: #006e4f;
+$theme-sub-color: #00996e;
+
+$navbar-background-color: $theme-color;
+$navbar-item-color: white;
+$navbar-item-hover-color: black;
+$navbar-item-hover-background-color: $theme-sub-color;
+$navbar-dropdown-background-color: $theme-color;
+
+@import "../../node_modules/bulma/bulma.sass";
