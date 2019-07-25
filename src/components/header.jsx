@@ -15,11 +15,15 @@ const Header = ({ siteTitle }) => {
             <Image
               src="common/logo.png"
               alt={siteTitle}
-              style={{ height: "70px", width: "175px" }}
+              style={{
+                height: "70px",
+                width: "175px",
+              }}
               imgStyle={{
                 height: "70px",
                 width: "175px",
                 maxHeight: "100%",
+                filter: "brightness(100%) invert(0%)",
               }}
             />
           </Link>
