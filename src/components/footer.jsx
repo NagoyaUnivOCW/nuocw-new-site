@@ -1,25 +1,26 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
 
 const Footer = ({ siteTitle }) => (
   <footer>
-    <div className="footer has-background-white-ter">
+    <Footer1 className="footer">
       <nav className="level">
         <div className="level-item">
           <ul className="has-text-justified content">
             <p>授業を探す</p>
             <p>
-              <Link to="./">カテゴリから探す</Link>
+              <StyledLink to="/">カテゴリから探す</StyledLink>
             </p>
             <p>
-              <Link to="./">学部／大学院から探す</Link>
+              <StyledLink to="/">学部／大学院から探す</StyledLink>
             </p>
             <p>
-              <Link to="./">詳細検索</Link>
+              <StyledLink to="/">詳細検索</StyledLink>
             </p>
             <p>
-              <Link to="./">一分間授業紹介</Link>
+              <StyledLink to="/">一分間授業紹介</StyledLink>
             </p>
           </ul>
         </div>
@@ -28,30 +29,10 @@ const Footer = ({ siteTitle }) => (
           <ul className="has-text-justified content">
             <p>TOPICS</p>
             <p>
-              <Link to="./">No.7 「0と1がつなぐ社会」</Link>
+              <StyledLink to="/">No.7 「0と1がつなぐ社会」</StyledLink>
             </p>
             <p>
-              <Link to="./">バックナンバー</Link>
-            </p>
-          </ul>
-        </div>
-
-        <div className="level-item">
-          <ul className="has-text-justified content">
-            <p>
-              <Link to="./">ごあいさつ</Link>
-            </p>
-            <p>
-              <Link to="./">「名大の授業について」</Link>
-            </p>
-            <p>
-              <Link to="./">用語解説</Link>
-            </p>
-            <p>
-              <Link to="./">ヘルプ</Link>
-            </p>
-            <p>
-              <Link to="./">お問い合わせ</Link>
+              <StyledLink to="/">バックナンバー</StyledLink>
             </p>
           </ul>
         </div>
@@ -59,35 +40,70 @@ const Footer = ({ siteTitle }) => (
         <div className="level-item">
           <ul className="has-text-justified content">
             <p>
-              <Link to="./">教員の方へ</Link>
+              <StyledLink to="/">ごあいさつ</StyledLink>
             </p>
             <p>
-              <Link to="./">OCW公式Twitter（日本語版）</Link>
+              <StyledLink to="/">「名大の授業について」</StyledLink>
             </p>
             <p>
-              <Link to="./">OCW公式Twitter（英語版）</Link>
+              <StyledLink to="/">用語解説</StyledLink>
             </p>
             <p>
-              <Link to="./">OCW公式Facebook</Link>
+              <StyledLink to="/">ヘルプ</StyledLink>
             </p>
             <p>
-              <Link to="./">Engpsh Page</Link>
+              <StyledLink to="/">お問い合わせ</StyledLink>
+            </p>
+          </ul>
+        </div>
+
+        <div className="level-item">
+          <ul className="has-text-justified content">
+            <p>
+              <StyledLink to="/">教員の方へ</StyledLink>
+            </p>
+            <p>
+              <StyledLink to="/">OCW公式Twitter（日本語版）</StyledLink>
+            </p>
+            <p>
+              <StyledLink to="/">OCW公式Twitter（英語版）</StyledLink>
+            </p>
+            <p>
+              <StyledLink to="/">OCW公式Facebook</StyledLink>
+            </p>
+            <p>
+              <StyledLink to="/">Engpsh Page</StyledLink>
             </p>
           </ul>
         </div>
       </nav>
-    </div>
+    </Footer1>
 
-    <div className="footer has-background-grey-lighter">
+    <Footer2 className="footer">
       <div className="has-text-centered">
         OCW website, and all course materials made pubpc on this site,
         <br />
         may be used under the terms and conditions psted under "About OCW"
         <br />© 2020 Nagoya University
       </div>
-    </div>
+    </Footer2>
   </footer>
 )
+
+const Footer1 = styled.div`
+  background-color: #707070;
+  color: #ffffff;
+`
+
+const Footer2 = styled.div`
+  background-color: #323232;
+  color: #ffffff;
+`
+
+const StyledLink = styled(Link)`
+  color: #ffffff;
+  text-decoration: underline;
+`
 
 Footer.propTypes = {
   siteTitle: PropTypes.string,
