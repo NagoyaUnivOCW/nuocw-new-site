@@ -1,3 +1,31 @@
+# NUOCW new site!!
+
+[Gatsbyjs](https://www.gatsbyjs.org/)で
+[新日本語版 OCW のデモサイト](https://nuocw-new-site.netlify.com/)を作成する。
+
+## 使用する主な要素
+
+- [Gatsbyjs](https://www.gatsbyjs.org/) (Static site generator using React)
+  - [React](https://reactjs.org/) (Javascript flamework)
+  - [Markdown](https://www.markdown.jp/what-is-markdown/) (text data)
+- [Bulma](https://bulma.io/) (CSS template)
+- [Styled-components](https://www.styled-components.com/) (CSS in JS)
+
+## 大まかなルール
+
+- 基本的にブランチを作成して改変=>master にマージしていく形で作業を進めていく
+  - [Redmine プロジェクト](https://dev2.ocw.media.nagoya-u.ac.jp/utility/redmine/projects/project-new-nuocw-site) のチケットを参照
+  - ブランチ名は基本的に **_20XX-easily-description_** のように頭にチケット番号をつけたスネークケースで作成する
+- 文字サイズの変更は極力しない
+  - 絶対値指定により、レスポンシブデザインが崩れるのを防ぎたい
+  - 変更する場合は[Bulma の文字サイズ変更 helper](https://bulma.io/documentation/modifiers/typography-helpers/)を使用
+- 色の変更は適宜 Styled-components を使用
+- pdf ファイルは別のフォルダに 1 か所に格納
+  - Markdown から参照する形で紐づけ
+- コード成型には **Prettiter** を使用
+
+---
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
@@ -10,7 +38,7 @@
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+_Have another more speci 番号 c idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
 
