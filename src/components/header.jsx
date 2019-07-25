@@ -1,33 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 
 import Image from "./image"
 
 const Header = ({ siteTitle }) => {
-  const changeActive = e => {
-    document.addEventListener("DOMContentLoaded", () => {
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(
-        document.querySelectorAll(".navbar-burger"),
-        0
-      )
-
-      // Check if there are any navbar burgers
-      if ($navbarBurgers.length > 0) {
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-          el.addEventListener("click", () => {
-            const target = el.dataset.target
-            const $target = document.getElementById(target)
-
-            el.classList.toggle("is-active")
-            $target.classList.toggle("is-active")
-          })
-        })
-      }
-    })
-  }
+  const [active, toggleActive] = useState(false)
 
   return (
     <header>
@@ -47,11 +25,11 @@ const Header = ({ siteTitle }) => {
           </Link>
           <span
             role="button"
-            className="navbar-burger burger"
+            className={`navbar-burger burger ${active ? "is-active" : ""}`}
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarMenu"
-            onClick={changeActive}
+            onClick={() => toggleActive(!active)}
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -59,7 +37,10 @@ const Header = ({ siteTitle }) => {
           </span>
         </div>
 
-        <div id="navbarMenu" className="navbar-menu">
+        <div
+          id="navbarMenu"
+          className={`navbar-menu ${active ? "is-active" : ""}`}
+        >
           <div className="navbar-start">
             <Link className="navbar-item" to="./">
               Home
