@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
           className={`navbar-menu ${active ? "is-active" : ""}`}
         >
           <div className="navbar-start">
-            <Link className="navbar-item" to="./">
+            <Link className="navbar-item" to="/">
               Home
             </Link>
 
@@ -71,10 +71,10 @@ const Header = ({ siteTitle }) => {
             <div className="navbar-item has-dropdown is-hoverable">
               <span className="navbar-link">特集記事</span>
               <div className="navbar-dropdown">
-                <Link className="navbar-item" to="./">
+                <Link className="navbar-item" to="/">
                   No.7 「0と1がつなぐ社会」
                 </Link>
-                <Link className="navbar-item" to="./">
+                <Link className="navbar-item" to="/">
                   過去のトピックス
                 </Link>
               </div>
@@ -83,20 +83,20 @@ const Header = ({ siteTitle }) => {
             <div className="navbar-item has-dropdown is-hoverable">
               <span className="navbar-link">初めての方へ</span>
               <div className="navbar-dropdown">
-                <Link className="navbar-item" to="./">
+                <Link className="navbar-item" to="/">
                   名大の授業について
                 </Link>
-                <Link className="navbar-item" to="./">
+                <Link className="navbar-item" to="/">
                   用語解説
                 </Link>
-                <Link className="navbar-item" to="./">
+                <Link className="navbar-item" to="/">
                   ヘルプ
                 </Link>
               </div>
             </div>
           </div>
 
-          <div class="navbar-end">
+          <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
               <span className="navbar-link">More</span>
               <div className="navbar-dropdown is-right">

@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 const Footer = ({ siteTitle }) => (
   <footer>
-    <Footer1 className="footer">
+    <Footer1>
       <nav className="level">
         <div className="level-item">
           <ul className="has-text-justified content">
@@ -79,7 +79,7 @@ const Footer = ({ siteTitle }) => (
       </nav>
     </Footer1>
 
-    <Footer2 className="footer">
+    <Footer2>
       <div className="has-text-centered">
         OCW website, and all course materials made pubpc on this site,
         <br />
@@ -91,11 +91,13 @@ const Footer = ({ siteTitle }) => (
 )
 
 const Footer1 = styled.div`
+  padding: 3rem 1.5rem 6rem;
   background-color: #707070;
   color: #ffffff;
 `
 
 const Footer2 = styled.div`
+  padding: 3rem 1.5rem 6rem;
   background-color: #323232;
   color: #ffffff;
 `
